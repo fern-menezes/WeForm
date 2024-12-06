@@ -13,9 +13,6 @@
 
 body{
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
-
-    font-size: 1.4rem;
 }
 .content{
     display: grid;
@@ -48,21 +45,24 @@ main{
     padding: 4.4rem 5.7rem;
     border-radius: 1.2rem;
     grid-area: form;
+    position: relative;
 }
 main h2{
     max-width: 43rem;
     font-size: 2.0rem;
     margin-bottom: 2.0rem;
 }
-main .botao{
+main .botao, .botao_cadastrar{
 display: flex;
 flex-flow: column;
 
+font-size: 1.4rem;
+font-weight: 500;
 width: 30rem;
 
 }
 /*há dois elementos iguais, com configurações de estilo diferentes, então, acessar eles como a:first-child*/
-main .botao a{
+main .botao a, .botao_cadastrar a{
     border-radius: 1.2rem;
     text-decoration: none;
     
@@ -91,4 +91,52 @@ main footer a{
 
     color: black;
     text-align: center;
+}
+main form{
+    margin-top: -1.5rem;
+    gap: 10rem;
+}
+
+main form :is(input, select){
+    display: flex;
+    width: 30rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
+    font-weight: 200;
+
+    background-color: #FFF;
+    border-radius: 0.2rem;
+    border: 0.1rem solid rgba(0,0,0,0.09);
+    margin-bottom: 1.0rem;
+    margin-top: 0.2rem;
+}
+
+main .botao_cadastrar{
+    margin-top: 3.0rem;
+}
+main header{
+    display: flex;
+    gap: 0.5rem;
+}
+header a{
+    margin-top: 0.6rem;
+    color: #FF5678;
+}
+main form .points{
+    position: relative;
+}
+
+main form input + button{
+    position: absolute;
+    color: #35E6E9;
+    right: -2.9rem;
+    top: 2.2rem;
+
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+
+}
+main form select{
+    appearance: none;
 }
